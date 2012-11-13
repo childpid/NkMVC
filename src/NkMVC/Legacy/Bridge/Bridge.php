@@ -23,6 +23,11 @@ class Bridge implements \ArrayAccess
      */
     public function __construct()
     {
+        $this->init();
+    }
+
+    public function init()
+    {
         $this->includedFiles = get_included_files();
         $this->definedVars = $GLOBALS;
     }
