@@ -8,14 +8,14 @@ use NkMVC\Legacy\Storage\DB;
 class Module
 {
     /**
-     * @var \NkMVC\Legacy\Bridge\Bridge
+     * @var \NkMVC\Legacy\Bridge\Bridge|null
      */
-    protected $bridge;
+    protected $bridge = null;
 
     /**
-     * @var \NkMVC\Legacy\Storage\DB
+     * @var \NkMVC\Legacy\Storage\DB|null
      */
-    protected $db;
+    protected $db = null;
 
     /**
      * The defined variables
@@ -23,13 +23,6 @@ class Module
      * @var array
      */
     protected $definedVars;
-
-    /**
-     * Modules
-     *
-     * @var array
-     */
-    protected $modules = array();
 
     /**
      * Constructor
@@ -40,7 +33,7 @@ class Module
     public function __construct(Bridge $bridge, DB $db)
     {
         $this->bridge = $bridge;
-        $this->definedVars = $this->bridge->getDefinedVars();
+        $this->db = $db;
     }
 
     /**
