@@ -11,7 +11,7 @@ class DB
      *
      * @var null
      */
-    protected $db = null;
+    protected static $db = null;
 
     /**
      * Constructor
@@ -21,6 +21,15 @@ class DB
     public function __construct(Bridge $bridge)
     {
         $definedVars = $bridge->getDefinedVars();
-        $this->db = is_resource($definedVars['db']) ? $definedVars['db'] : null;
+
+        self::$db = is_resource($definedVars['db']) ? $definedVars['db'] : null;
+    }
+
+    /**
+     * @return null
+     */
+    public static function getInstance()
+    {
+        return self::$db;
     }
 }
