@@ -1,4 +1,7 @@
 <?php
+
+define('USE_NKMVC', true);
+
 // -------------------------------------------------------------------------//
 // Nuked-KlaN - PHP Portal                                                  //
 // http://www.nuked-klan.org                                                //
