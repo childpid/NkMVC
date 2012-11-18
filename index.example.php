@@ -156,9 +156,7 @@ else if (($_REQUEST['file'] != 'Admin' AND $_REQUEST['page'] != 'admin') || ( ni
     else
         header('Content-Type: text/html;charset=ISO-8859-1');
 
-    if (is_file('modules/' . $_REQUEST['file'] . '/' . $_REQUEST['im_file'] . '.php')){
-        include('modules/' . $_REQUEST['file'] . '/' . $_REQUEST['im_file'] . '.php');
-    } else if (USE_NKMVC) {
+    if (USE_NKMVC) {
         // $modulesPath = 'NkMVC/src/NkMVC/Modules/';
         // if db use nkmvc define('USE_NKMVC', true);
 
