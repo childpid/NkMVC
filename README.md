@@ -18,8 +18,6 @@ par
 
 ```php
 if (USE_NKMVC) {
-        // $modulesPath = 'NkMVC/src/NkMVC/Modules/';
-        // if db use nkmvc define('USE_NKMVC', true);
 
         require_once __DIR__ . '/NkMVC/autoload.php';
 
