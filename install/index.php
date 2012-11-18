@@ -237,7 +237,7 @@ final class NkMVCInstall
 $top = <<<TOP
 <?php
 
-const USE_NKMVC, true);
+DEFINE('USE_NKMVC', true);
 
 TOP;
 
@@ -245,21 +245,19 @@ $bottom = <<<BOTTTOM
 
 if (USE_NKMVC) {
     require_once __DIR__ . '/NkMVC/autoload.php';
-    \$bridge = new NkMVC\Legacy\Bridge\Bridge();
-    \$bridge->init();
 }
 ?>
 BOTTTOM;
 
         $content = str_replace("<?php", $top, $this->content);
+        $content = preg_replace('/if \(is_file\(\'modules\/\'/', "if (is_file('NkMVC/src/NkMVC/Modules/'", $content);
+        $content = preg_replace('/include\(\'modules\/\'/', "include('NkMVC/src/NkMVC/Modules/'", $content);
         $content = str_replace(substr($this->content, strrpos($this->content, '?>', -1)), '', $content);
-        $content .= $bottom;
+        //$content .= $bottom;
 
         return $content;
-
     }
 }
-
 
 $install = new NkMVCInstall;
 $install->run();
