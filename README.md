@@ -5,6 +5,9 @@ Un PoC [Preuve de Concept] permettant d'utiliser du MVC dans le CMS Nuked-Klan
 
 Pour tester NkMVC:
 
+Créez le répertoire "NkMVC et placez les fichiers et répertoires que vous avez téléchargé à l'interieur
+
+
 Insérez en haut de page de votre fichier "index.php" 
 
 ```php
@@ -40,3 +43,5 @@ if (USE_NKMVC) {
 }
 else include('modules/404/index.php');
 ```
+
+Un fichier "index.example.php" d'exemple est disponible, vous devez l'insérez à la racine de votre CMS nuked-klan
