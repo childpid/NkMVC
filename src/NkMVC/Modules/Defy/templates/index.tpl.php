@@ -1,7 +1,7 @@
 <div>
     <table>
         <tr>
-            <td>download</td>
+            <td>index</td>
         </tr>
     </table>
 </div>
