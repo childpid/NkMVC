@@ -3,9 +3,19 @@ NkMVC
 
 Un PoC [Preuve de Concept] permettant d'utiliser du MVC dans le CMS Nuked-Klan
 
-Pour tester NkMVC
+Pour tester NkMVC:
 
-Remplacer dans votre fichier "index.php" le code suivant:
+Insérez en haut de page de votre fichier "index.php" 
+
+```php
+<?php 
+...
+
+define('USE_NKMVC', true)
+...
+```
+
+Puis, remplacez le code suivant:
 
 ```php
 if (is_file('modules/' . $_REQUEST['file'] . '/' . $_REQUEST['im_file'] . '.php')) {
