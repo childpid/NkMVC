@@ -9,7 +9,7 @@ Remplacer dans votre fichier "index.php" le code suivant:
 
 ```php
 if (is_file('modules/' . $_REQUEST['file'] . '/' . $_REQUEST['im_file'] . '.php')) {
-        include('modules/' . $_REQUEST['file'] . '/' . $_REQUEST['im_file'] . '.php');
+    include('modules/' . $_REQUEST['file'] . '/' . $_REQUEST['im_file'] . '.php');
 }
 else include('modules/404/index.php');
 ```
