@@ -1,7 +1,7 @@
 NkMVC
 =====
 
-# Un PoC [Preuve de Concept] permettant d'utiliser du MVC dans le CMS Nuked-Klan
+Un PoC [Preuve de Concept] permettant d'utiliser du MVC dans le CMS Nuked-Klan
 
 Pour tester NkMVC
 
