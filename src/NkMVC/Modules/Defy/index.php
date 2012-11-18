@@ -4,20 +4,16 @@ namespace NkMVC\Modules\Defy;
 
 use NkMVC\Legacy\Request\Request;
 use NkMVC\Legacy\Storage\DB;
+use NkMVC\Legacy\View\View;
 
-class Defy implements \NkMVC\Modules\ModuleInterface
+class Defy extends View implements \NkMVC\Modules\ModuleInterface
 {
     public function executeIndex(Request $request)
     {
-        $db = DB::getInstance();
-        echo 'NkMV';
-        var_dump($db);
-
     }
 
     public function executeDownload(Request $request)
     {
-        echo 'DOWNLOAD daaaa!';
     }
 
     public function getModuleName()
